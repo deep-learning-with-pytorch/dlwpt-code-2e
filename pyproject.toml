@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "deeplearningwithpytorch-secondedition"
+version = "0.1.0"
+description = ""
+authors = ["Howard Huang <hwh2dev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "deeplearningwithpytorch_secondedition"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.31.0"
+h5py = "^3.9.0"
+imageio = "^2.31.1"
+matplotlib = "^3.7.2"
+plotly = "^5.18.0"
+nbformat = "^5.9.2"
+seaborn = "^0.13.1"
+tensorboard = "^2.16.2"
+torchviz = "^0.0.2"
+torchinfo = "^1.8.0"
+scipy = "^1.13.1"
+diffusers = "^0.33.1"
+numpy = "^1.26.4"
+accelerate = "^0.33.0"
+simpleitk = "^2.4.0"
+diskcache = "^5.6.3"
+ipyvolume = "^0.6.3"
+tqdm = "^4.66.6"
+gradio = "^5.25.2"
+onnx = "^1.18.0"
+onnxruntime = "^1.22.0"
+onnxscript = "^0.2.5"
+tiktoken = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+ipykernel = "^6.24.0"
+chardet = "^5.2.0"
+
+[tool.poetry.group.cpu.dependencies]
+torch = "^2.6.0"
+torchvision = "^0.21.0"
+torchaudio = "^2.6.0"
+
+[tool.poetry.group.gpu.dependencies]
+torch = {version = "^2.6.0+cu118", source = "pytorch-gpu"}
+torchvision = {version = "^0.21.0+cu118", source = "pytorch-gpu"}
+torchaudio = {version = "^2.6.0+cu118", source = "pytorch-gpu"}
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

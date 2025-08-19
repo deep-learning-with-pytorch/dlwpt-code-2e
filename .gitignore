@@ -1,0 +1,17 @@
+.venv
+build/
+data-unversioned/
+*.zip
+code/data/p2ch10/cifar-10-*
+*.pth
+*.pt
+*.pt2
+model.pt
+**/.DS_Store
+notes.md
+__pycache__/
+code/runs/*
+.gradio
+*.onnx
+libtorch/
+*.json
