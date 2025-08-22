@@ -37,24 +37,9 @@ black = "^23.7.0"
 ipykernel = "^6.24.0"
 chardet = "^5.2.0"
 
-[tool.poetry.group.cpu.dependencies]
-torch = "^2.6.0"
-torchvision = "^0.21.0"
-torchaudio = "^2.6.0"
-
-[tool.poetry.group.gpu.dependencies]
-torch = {version = "^2.6.0+cu118", source = "pytorch-gpu"}
-torchvision = {version = "^0.21.0+cu118", source = "pytorch-gpu"}
-torchaudio = {version = "^2.6.0+cu118", source = "pytorch-gpu"}
-
 [[tool.poetry.source]]
 name = "pypi"
 priority = "primary"
-
-[[tool.poetry.source]]
-name = "pytorch-gpu"
-url = "https://download.pytorch.org/whl/cu118"
-priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
